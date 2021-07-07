@@ -5,5 +5,5 @@
 	path = themes/hugo-theme-tokiwa
 	url = https://github.com/heyeshuang/hugo-theme-tokiwa.git
 [submodule "themes/pure"]
-	path = themes/hugo-vitae
+	path = themes/pure
 	url = https://github.com/xiaoheiAh/hugo-theme-pure.git
