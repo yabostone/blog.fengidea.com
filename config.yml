@@ -1,6 +1,6 @@
 baseURL: https://blog.fengidea.com/
 theme: pure
-title: fengidea个人
+title: Feng Peng | 彭峰
 copyright: CC BY 4.0 CN
 defaultContentLanguage: zh  # en/zh/...
 footnoteReturnLinkContents: ↩
@@ -100,20 +100,20 @@ params:
     enabled: true # Whether to show profile bar
     avatar: avatar.png
     gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-    author: ideaPad
-    author_title: idea-you
+    author: 彭峰
+    author_title: idea
     author_description: Good Good Study, Day Day Up~
-    location: Shanghai, China
-    follow: https://github.com/fengidea
+    location: Kunshan,Jiangsu,China
+    follow: https://github.com/yabostone
     # Social Links
     social:
       links:
-        github: https://github.com/fengidea
+        github: https://github.com/yabostone
         # weibo: http://weibo.com/{yourid}
         # twitter: https://twitter.com/
         # facebook: /
         rss: /index.xml
-      link_tooltip: false # enable the social link tooltip, options: true, false
+      link_tooltip: true # enable the social link tooltip, options: true, false
   # Site
   site:
     logo:
@@ -123,7 +123,7 @@ params:
       url: favicon.ico
     title: Hugo # 页面title
     favicon: favicon.ico
-    board: <p>公告牌</p> # 公告牌
+    board: <p>小站七年后再次上线啦</p> # 公告牌
 
   # Share
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
@@ -155,7 +155,7 @@ params:
 
   # Donate
   donate:
-    enable: false
+    enable: true
     # 微信打赏
     wechatpay:
       qrcode: donate/wechatpayimg.png
