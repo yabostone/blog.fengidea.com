@@ -6,10 +6,28 @@
     <description>Recent content on Feng Peng | 彭峰</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Thu, 08 Jul 2021 11:13:09 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jul 2021 11:38:14 +0800</lastBuildDate>
     
         <atom:link href="https://blog.fengidea.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>币圈搬砖</title>
+      <link>https://blog.fengidea.com/2021/07/%E6%90%AC%E7%A0%96/</link>
+      <pubDate>Thu, 08 Jul 2021 11:38:14 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2021/07/%E6%90%AC%E7%A0%96/</guid>
+      <description>技术原理 寻找价差扣除手续费后的搬砖套利，需要编写代码和交易所的api，不然需要使用webdriver的selenium模拟交易。</description>
+    </item>
+    
+    <item>
+      <title>考研数学</title>
+      <link>https://blog.fengidea.com/2021/07/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Thu, 08 Jul 2021 11:38:14 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2021/07/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/</guid>
+      <description>还是感觉心情烦躁 今天看了考研数学的题，发现当年16年17年的题还是感觉有难度，不知道自己学习的提升在哪里，套卷做起来也不熟悉。解决方法，开始</description>
+    </item>
     
     <item>
       <title>链闻</title>
