@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Feng Peng | 彭峰</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sun, 11 Jul 2021 12:01:13 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jul 2021 00:15:37 +0800</lastBuildDate>
     
         <atom:link href="https://blog.fengidea.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CDN</title>
+      <link>https://blog.fengidea.com/2021/07/cdn/</link>
+      <pubDate>Wed, 14 Jul 2021 00:15:37 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2021/07/cdn/</guid>
+      <description>Render.com和Bunny.net render.com 自带CDN，本身速度也不差，本站只是静态页面整体的存储空间占用也不大，感到用render建站很开心</description>
+    </item>
     
     <item>
       <title>知乎心理-性取向</title>
