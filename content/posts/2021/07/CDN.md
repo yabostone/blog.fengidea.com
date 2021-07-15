@@ -1,5 +1,5 @@
 ---
-title: "CDN"
+title: "BunnyCDN"
 date: 2021-07-14T00:15:37+08:00
 tags: 
   - CDN

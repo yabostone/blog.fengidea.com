@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.fengidea.com/2021/07/cdn/</loc>
+    <lastmod>2021-07-14T00:15:37+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.fengidea.com/categories/</loc>
     <lastmod>2021-07-14T00:15:37+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -18,13 +25,6 @@
   
   <url>
     <loc>https://blog.fengidea.com/categories/cdn/</loc>
-    <lastmod>2021-07-14T00:15:37+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.fengidea.com/2021/07/cdn/</loc>
     <lastmod>2021-07-14T00:15:37+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
