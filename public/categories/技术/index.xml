@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>资源受限下VPS使用小结</title>
+      <link>https://blog.fengidea.com/2021/08/%E8%B5%84%E6%BA%90%E5%8F%97%E9%99%90%E4%B8%8Bvps%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93/</link>
+      <pubDate>Sun, 01 Aug 2021 12:10:49 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2021/08/%E8%B5%84%E6%BA%90%E5%8F%97%E9%99%90%E4%B8%8Bvps%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93/</guid>
+      <description>在资源受限下VPS使用 资源受限下，如RAM不足，会导致kswapd0命令CPU进程上升，而VPS会对CPU占用时间长的命令自动杀死，导致qb</description>
+    </item>
+    
+    <item>
       <title>零知识证明</title>
       <link>https://blog.fengidea.com/2021/07/%E9%9B%B6%E7%9F%A5%E8%AF%86%E8%AF%81%E6%98%8E/</link>
       <pubDate>Sat, 31 Jul 2021 22:34:27 +0800</pubDate>

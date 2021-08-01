@@ -4,28 +4,56 @@
   
   <url>
     <loc>https://blog.fengidea.com/categories/</loc>
-    <lastmod>2021-07-31T22:34:27+08:00</lastmod>
+    <lastmod>2021-08-01T12:10:49+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.fengidea.com/</loc>
-    <lastmod>2021-07-31T22:34:27+08:00</lastmod>
+    <lastmod>2021-08-01T12:10:49+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.fengidea.com/posts/</loc>
-    <lastmod>2021-07-31T22:34:27+08:00</lastmod>
+    <lastmod>2021-08-01T12:10:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fengidea.com/tags/shell/</loc>
+    <lastmod>2021-08-01T12:10:49+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.fengidea.com/tags/</loc>
-    <lastmod>2021-07-31T22:34:27+08:00</lastmod>
+    <lastmod>2021-08-01T12:10:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fengidea.com/tags/vps/</loc>
+    <lastmod>2021-08-01T12:10:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fengidea.com/categories/vps/</loc>
+    <lastmod>2021-08-01T12:10:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fengidea.com/2021/08/%E8%B5%84%E6%BA%90%E5%8F%97%E9%99%90%E4%B8%8Bvps%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93/</loc>
+    <lastmod>2021-08-01T12:10:49+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
