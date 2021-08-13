@@ -12,29 +12,29 @@
     
     
     <item>
-      <title>网络变更后的下载方式</title>
-      <link>https://blog.fengidea.com/2021/08/%E7%BD%91%E7%BB%9C%E5%8F%98%E6%9B%B4%E5%90%8E%E7%9A%84%E4%B8%8B%E8%BD%BD%E6%96%B9%E5%BC%8F/</link>
+      <title>win负载均衡</title>
+      <link>https://blog.fengidea.com/2021/08/win%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
       <pubDate>Fri, 06 Aug 2021 23:13:22 +0800</pubDate>
       
-      <guid>https://blog.fengidea.com/2021/08/%E7%BD%91%E7%BB%9C%E5%8F%98%E6%9B%B4%E5%90%8E%E7%9A%84%E4%B8%8B%E8%BD%BD%E6%96%B9%E5%BC%8F/</guid>
+      <guid>https://blog.fengidea.com/2021/08/win%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
       <description>网络变更后的处理方式 今日学校的网络发生了变更，晚上的不限速没有了，这里意味着rclone开始不太好用，因为限速了很容易跑满，同时网络会有不稳</description>
     </item>
     
     <item>
-      <title>网络空间安全考试科目变更</title>
-      <link>https://blog.fengidea.com/2021/08/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E8%80%83%E8%AF%95%E7%A7%91%E7%9B%AE%E5%8F%98%E6%9B%B4/</link>
+      <title>西电网安考研考试科目变更</title>
+      <link>https://blog.fengidea.com/2021/08/%E8%A5%BF%E7%94%B5%E7%BD%91%E5%AE%89%E8%80%83%E7%A0%94/</link>
       <pubDate>Tue, 03 Aug 2021 17:42:37 +0800</pubDate>
       
-      <guid>https://blog.fengidea.com/2021/08/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E8%80%83%E8%AF%95%E7%A7%91%E7%9B%AE%E5%8F%98%E6%9B%B4/</guid>
+      <guid>https://blog.fengidea.com/2021/08/%E8%A5%BF%E7%94%B5%E7%BD%91%E5%AE%89%E8%80%83%E7%A0%94/</guid>
       <description>西安电子科技大学网络与信息安全学院关于2022年硕士研究生招生初试专业课程考试科目变更的公告 来源： 发布：2021-08-03 根据研究生培养的</description>
     </item>
     
     <item>
-      <title>资源受限下VPS使用小结</title>
-      <link>https://blog.fengidea.com/2021/08/%E8%B5%84%E6%BA%90%E5%8F%97%E9%99%90%E4%B8%8Bvps%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93/</link>
+      <title>512mVPS使用</title>
+      <link>https://blog.fengidea.com/2021/08/512mvps%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Sun, 01 Aug 2021 12:10:49 +0800</pubDate>
       
-      <guid>https://blog.fengidea.com/2021/08/%E8%B5%84%E6%BA%90%E5%8F%97%E9%99%90%E4%B8%8Bvps%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93/</guid>
+      <guid>https://blog.fengidea.com/2021/08/512mvps%E4%BD%BF%E7%94%A8/</guid>
       <description>在资源受限下VPS使用 资源受限下，如RAM不足，会导致kswapd0命令CPU进程上升，而VPS会对CPU占用时间长的命令自动杀死，导致qb</description>
     </item>
     
