@@ -6,9 +6,28 @@
     <description>Recent content in Posts on Feng Peng | 彭峰</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://blog.fengidea.com/posts/draft/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>内耗型心理</title>
+      <link>https://blog.fengidea.com/2021/09/%E5%86%85%E8%80%97%E5%9E%8B%E5%BF%83%E7%90%86/</link>
+      <pubDate>Sun, 12 Sep 2021 12:55:38 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2021/09/%E5%86%85%E8%80%97%E5%9E%8B%E5%BF%83%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>近日心情</title>
+      <link>https://blog.fengidea.com/2021/08/%E8%BF%91%E6%97%A5%E5%BF%83%E6%83%85/</link>
+      <pubDate>Thu, 19 Aug 2021 22:53:04 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2021/08/%E8%BF%91%E6%97%A5%E5%BF%83%E6%83%85/</guid>
+      <description>近日心情 发现这么多年，政治英语还是没有什么长进，该60的还是60，这样比较打脸，考虑到提高的优势，是不是数学的时间不用花上那么多，而是选择每</description>
+    </item>
     
     <item>
       <title>win负载均衡</title>
@@ -71,6 +90,15 @@
       
       <guid>https://blog.fengidea.com/2021/07/%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E9%98%B2%E8%8C%83/</guid>
       <description>理财防范 基于专业分析，防范风险很重要，能够有自己的观点，自己的见解。</description>
+    </item>
+    
+    <item>
+      <title>自我反思</title>
+      <link>https://blog.fengidea.com/2021/07/%E8%87%AA%E6%88%91%E5%8F%8D%E6%80%9D/</link>
+      <pubDate>Wed, 21 Jul 2021 23:46:37 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2021/07/%E8%87%AA%E6%88%91%E5%8F%8D%E6%80%9D/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -155,12 +183,14 @@
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://blog.fengidea.com/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      <title>Markdown Syntax Guide</title>
+      <link>https://blog.fengidea.com/2019/03/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.fengidea.com/about/</guid>
-      <description>关于小站 时隔6年我的小站再次上线了，没有更多的后台选择困难症，开始专注于写作啦。你可以从主页和我的生活中更多的了解我。这个博客是记录兴趣喜好</description>
+      <guid>https://blog.fengidea.com/2019/03/markdown-syntax/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://static-1252005972.file.myqcloud.com/picture/2021/07/lADPDhYBQfJB613NO37NAsQ_708_15230.jpg!sf&#34; alt=&#34;tupian&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上面是图片格式的书写和域名等等。&lt;/p&gt;
+&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
   </channel>
