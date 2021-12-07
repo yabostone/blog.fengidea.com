@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>装机回顾总结</title>
+      <link>https://blog.fengidea.com/2021/12/%E8%A3%85%E6%9C%BA%E5%9B%9E%E9%A1%BE%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 07 Dec 2021 11:15:29 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2021/12/%E8%A3%85%E6%9C%BA%E5%9B%9E%E9%A1%BE%E6%80%BB%E7%BB%93/</guid>
+      <description>装机新的一页 之前的机子被拆了，这回考虑到电费，就新配了一些机子作为服务器，x79的主机作为服务器非常耗电，一台机子就要100w每小时，折合电</description>
+    </item>
+    
+    <item>
       <title>随手一记</title>
       <link>https://blog.fengidea.com/2021/10/%E9%9A%8F%E6%89%8B%E4%B8%80%E8%AE%B0/</link>
       <pubDate>Fri, 08 Oct 2021 15:43:46 +0800</pubDate>
@@ -180,15 +189,6 @@
       
       <guid>https://blog.fengidea.com/2021/07/%E5%B0%8F%E7%AB%99%E4%B8%8A%E7%BA%BF/</guid>
       <description>小站的变化 博客经历过Wordpress，Drupal，Ghost，Jekyll，最后到Hugo，从复杂到简单也是这些年自己对待事物的一个注脚</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://blog.fengidea.com/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.fengidea.com/about/</guid>
-      <description>关于小站 时隔6年我的小站再次上线了，没有更多的后台选择困难症，开始专注于写作啦。你可以从主页和我的生活中更多的了解我。这个博客是记录兴趣喜好</description>
     </item>
     
   </channel>
