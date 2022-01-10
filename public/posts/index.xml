@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Feng Peng | 彭峰</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Feng Peng | 彭峰</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Tue, 07 Dec 2021 11:15:29 +0800</lastBuildDate>
-    
-        <atom:link href="https://blog.fengidea.com/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 07 Dec 2021 11:15:29 +0800</lastBuildDate><atom:link href="https://blog.fengidea.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>装机回顾总结</title>
       <link>https://blog.fengidea.com/2021/12/%E8%A3%85%E6%9C%BA%E5%9B%9E%E9%A1%BE%E6%80%BB%E7%BB%93/</link>
