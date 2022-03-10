@@ -1,9 +1,8 @@
-baseURL: https://blog.fengidea.com/
-#theme: pure
-theme: hugo-theme-pure
-title: Feng Peng | 彭峰
+baseURL: https://example.com/
+theme: pure
+title: Pure theme for Hugo
 copyright: CC BY 4.0 CN
-defaultContentLanguage: zh  # en/zh/...
+defaultContentLanguage: en  # en/zh/...
 footnoteReturnLinkContents: ↩
 hasCJKLanguage: true
 paginate: 7
@@ -66,7 +65,7 @@ menu:
 
 
 params:
-  since: 2018
+  since: 2017
   dateFormatToUse: "2006-01-02"
   enablePostCopyright: true
   copyright_link: http://creativecommons.org/licenses/by/4.0/deed.zh
@@ -101,20 +100,20 @@ params:
     enabled: true # Whether to show profile bar
     avatar: avatar.png
     gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-    author: 彭峰
-    author_title: idea
+    author: xiaoheiAh
+    author_title: author title
     author_description: Good Good Study, Day Day Up~
-    location: Kunshan,Jiangsu,China
-    follow: https://github.com/yabostone
+    location: Shanghai, China
+    follow: https://github.com/xiaoheiAh
     # Social Links
     social:
       links:
-        github: https://github.com/yabostone
+        github: https://github.com/xiaoheiAh
         # weibo: http://weibo.com/{yourid}
         # twitter: https://twitter.com/
         # facebook: /
         rss: /index.xml
-      link_tooltip: true # enable the social link tooltip, options: true, false
+      link_tooltip: false # enable the social link tooltip, options: true, false
   # Site
   site:
     logo:
@@ -124,39 +123,39 @@ params:
       url: favicon.ico
     title: Hugo # 页面title
     favicon: favicon.ico
-    board: <p>小站七年后再次上线啦</p> # 公告牌
+    board: <p>enjoy~</p> # 公告牌
 
   # Share
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
   share:
-    enable: false # 是否启用分享
+    enable: true # 是否启用分享
     sites: weibo,qq,wechat,facebook,twitter # PC端显示的分享图标
     mobile_sites: weibo,qq,qzone # 移动端显示的分享图标
 
   # Comment
-  # comment:
-    # type:  # type disqus/gitalk/valine 启用哪种评论系统
-    # disqus: your_disqus_name # enter disqus shortname here
-    # gitalk: # gitalk. https://gitalk.github.io/
-      # owner: #必须. GitHub repository 所有者，可以是个人或者组织。
-      # admin: #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
-      # repo:  #必须. GitHub repository.
-      # ClientID: #必须. GitHub Application Client ID.
-      # ClientSecret: #必须. GitHub Application Client Secret.
-    # valine: # Valine. https://valine.js.org
-      # appid: # your leancloud application appid
-      # appkey: # your leancloud application appkey
-      # notify: # mail notifier , https://github.com/xCss/Valine/wiki
-      # verify: # Verification code
-      # placeholder: enjoy~ # comment box placeholder
-      # avatar: mm # gravatar style
-      # meta: nick,mail # custom comment header
-      # pageSize: 10 # pagination size
-      # visitor: false # Article reading statistic https://valine.js.org/visitor.html
+  comment:
+    type:  # type disqus/gitalk/valine 启用哪种评论系统
+    disqus: your_disqus_name # enter disqus shortname here
+    gitalk: # gitalk. https://gitalk.github.io/
+      owner: #必须. GitHub repository 所有者，可以是个人或者组织。
+      admin: #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
+      repo:  #必须. GitHub repository.
+      ClientID: #必须. GitHub Application Client ID.
+      ClientSecret: #必须. GitHub Application Client Secret.
+    valine: # Valine. https://valine.js.org
+      appid: # your leancloud application appid
+      appkey: # your leancloud application appkey
+      notify: # mail notifier , https://github.com/xCss/Valine/wiki
+      verify: # Verification code
+      placeholder: enjoy~ # comment box placeholder
+      avatar: mm # gravatar style
+      meta: nick,mail # custom comment header
+      pageSize: 10 # pagination size
+      visitor: false # Article reading statistic https://valine.js.org/visitor.html
 
   # Donate
   donate:
-    enable: true
+    enable: false
     # 微信打赏
     wechatpay:
       qrcode: donate/wechatpayimg.png
@@ -183,7 +182,7 @@ params:
 
   # config
   config:
-    skin: theme-purple # theme color default is white. other type [theme-black,theme-blue,theme-green,theme-purple]
+    skin: theme-black # theme color default is white. other type [theme-black,theme-blue,theme-green,theme-purple]
     layout: main-center # main-left main-center main-right
     excerpt_link: Read More
     toc: true
