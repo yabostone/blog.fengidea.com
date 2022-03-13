@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Feng Peng | 彭峰</title>
@@ -6,7 +6,29 @@
     <description>Recent content in Posts on Feng Peng | 彭峰</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Tue, 07 Dec 2021 11:15:29 +0800</lastBuildDate><atom:link href="https://blog.fengidea.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Mar 2022 10:59:00 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog.fengidea.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Serverless和lxml的环境部署</title>
+      <link>https://blog.fengidea.com/2022/03/serverless%E5%92%8Clxml%E7%9A%84%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Sun, 13 Mar 2022 10:59:00 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2022/03/serverless%E5%92%8Clxml%E7%9A%84%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</guid>
+      <description>serverless的环境部署 今日用serverless 搭建了个小型监控报警系统。 有几个需要注意的点。 python需要 用 pip install -r requirements.txt -t . 来将依赖</description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>https://blog.fengidea.com/2022/03/resume/</link>
+      <pubDate>Wed, 09 Mar 2022 10:50:55 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2022/03/resume/</guid>
+      <description>个人简历：https://blog.fengidea.com/pdf/彭峰-JAVA.pdf</description>
+    </item>
+    
     <item>
       <title>装机回顾总结</title>
       <link>https://blog.fengidea.com/2021/12/%E8%A3%85%E6%9C%BA%E5%9B%9E%E9%A1%BE%E6%80%BB%E7%BB%93/</link>
@@ -167,24 +189,6 @@
       
       <guid>https://blog.fengidea.com/2021/07/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/</guid>
       <description>还是感觉心情烦躁 今天看了考研数学的题，发现当年16年17年的题还是感觉有难度，不知道自己学习的提升在哪里，套卷做起来也不熟悉。解决方法，开始</description>
-    </item>
-    
-    <item>
-      <title>链闻</title>
-      <link>https://blog.fengidea.com/2021/07/%E9%93%BE%E9%97%BB/</link>
-      <pubDate>Thu, 08 Jul 2021 11:13:09 +0800</pubDate>
-      
-      <guid>https://blog.fengidea.com/2021/07/%E9%93%BE%E9%97%BB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>小站上线啦</title>
-      <link>https://blog.fengidea.com/2021/07/%E5%B0%8F%E7%AB%99%E4%B8%8A%E7%BA%BF/</link>
-      <pubDate>Wed, 07 Jul 2021 17:44:36 +0800</pubDate>
-      
-      <guid>https://blog.fengidea.com/2021/07/%E5%B0%8F%E7%AB%99%E4%B8%8A%E7%BA%BF/</guid>
-      <description>小站的变化 博客经历过Wordpress，Drupal，Ghost，Jekyll，最后到Hugo，从复杂到简单也是这些年自己对待事物的一个注脚</description>
     </item>
     
   </channel>

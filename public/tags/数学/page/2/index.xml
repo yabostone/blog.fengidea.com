@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>链闻</title>
+      <link>https://blog.fengidea.com/2021/07/%E9%93%BE%E9%97%BB/</link>
+      <pubDate>Thu, 08 Jul 2021 11:13:09 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2021/07/%E9%93%BE%E9%97%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>小站上线啦</title>
+      <link>https://blog.fengidea.com/2021/07/%E5%B0%8F%E7%AB%99%E4%B8%8A%E7%BA%BF/</link>
+      <pubDate>Wed, 07 Jul 2021 17:44:36 +0800</pubDate>
+      
+      <guid>https://blog.fengidea.com/2021/07/%E5%B0%8F%E7%AB%99%E4%B8%8A%E7%BA%BF/</guid>
+      <description>小站的变化 博客经历过Wordpress，Drupal，Ghost，Jekyll，最后到Hugo，从复杂到简单也是这些年自己对待事物的一个注脚</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://blog.fengidea.com/about/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
