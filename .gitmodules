@@ -8,3 +8,6 @@
 	path = themes/hugo-theme-pure
 	url = https://github.com/xiaoheiAh/hugo-theme-pure.git
 
+[submodule "themes/theme-pure"]
+	path = themes/theme-pure
+	url = https://github.com/yabostone/theme-pure

@@ -1,6 +1,6 @@
 baseURL: https://blog.fengidea.com/
 #theme: pure
-theme: hugo-theme-pure
+theme: theme-pure
 title: Feng Peng | 彭峰
 copyright: CC BY 4.0 CN
 defaultContentLanguage: zh  # en/zh/...
