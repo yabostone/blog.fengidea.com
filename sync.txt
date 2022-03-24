@@ -1,1 +1,0 @@
-rclone sync -P .\public\ blog.fengidea.com:blog.fengidea.com.1/
