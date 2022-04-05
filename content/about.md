@@ -12,7 +12,7 @@ author = "Hugo Authors"
 
 #### 关于站点
 
-站点采用hugo编写静态页面，排除了Jekyll的繁杂，更无需Wordpress的功能多样性，托管在[Github]()上，通过action自动在[Render](https://render.com)上部署。阅读时如果发现有什么错误，请在github上发PR来帮我纠正错我。
+站点采用hugo编写静态页面，排除了Jekyll的繁杂，更无需Wordpress的功能多样性，托管在[Github]()上，通过action自动在[Render](https://render.com)上部署。阅读时如果发现有什么错误，请在github上发PR来帮我纠正错误。
 
 #### 其他的一些链接
 
