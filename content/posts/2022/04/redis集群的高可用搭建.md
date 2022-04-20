@@ -43,7 +43,7 @@ Docker uses a technique called *port mapping*: programs running inside Docker co
 
   + 使用了status。podIP的bash式方式获取IP。
 
-  ![image-20220405155756048](../../../../../../../AppData/Roaming/Typora/typora-user-images/image-20220405155756048.png)
+  ![image-20220405155756048](https://link.ap1.storjshare.io/raw/jxl7tkgemjfqomuhhv3epaakfcqq/picgo/picgo/2022/04/6e6b425a5e3479842b16549ed3dc6cb0.png)
 
 网址 https://www.gotkx.com/?p=76
 
@@ -113,7 +113,7 @@ sentinel 默认是没有用户名的，只有密码。redis 默认也不用填�
 
 进入desktop后，会有连接节点，需要输用户名密码
 
-![image-20220405181812962](../../../../../../../AppData/Roaming/Typora/typora-user-images/image-20220405181812962.png)
+![image-20220405181812962](https://link.ap1.storjshare.io/raw/jxl7tkgemjfqomuhhv3epaakfcqq/picgo/picgo/2022/04/2b9a18aba77133bbee6468c6b3022a8a.png)
 
 1. **Sentinel、Docker 或其他形式的网络地址转换或端口映射应小心混合**：Docker 执行端口重新映射，破坏其他 Sentinel 进程的 Sentinel 自动发现和主服务器的副本列表。查看本文档后面[关于*Sentinel 和 Docker的部分以获取更多信息。*](https://redis.io/docs/manual/sentinel/#sentinel-docker-nat-and-possible-issues)
 

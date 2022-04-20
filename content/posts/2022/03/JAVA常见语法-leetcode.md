@@ -226,3 +226,136 @@ Python的最大最小值
 
 后续没有合并的链表内容。
 
+#### 32 最长有效括号
+
+扫两遍，正向扫和反向扫，判断left 的左括号和right的右括号数量。
+
+#### 33 部分有序
+
+面对分部分有序的，都是用二分算法。
+
+#### 44 hard题
+
+不会，。。。
+
+#### 45 
+
+贪心算法或者动态规划。
+
+#### 49字符串异位分组
+
+需要将字符串分成每个字符后排序处理。
+
+#### 58 最后一个单词的长度
+
+用反向遍历，设index为 length-1.
+
+
+
+#### 59 旋转矩阵
+
+通过         int\[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}}; // 右下左上 
+
+判定下一步前进方向
+
+通过
+
+```java
+//通过nextRow判断下一步的row 的位置
+int nextRow = row + directions[directionIndex][0], 
+// 通过nextColumn判断下一步column位置
+
+nextColumn = column + directions[directionIndex][1];
+            if (nextRow < 0 || nextRow >= n || nextColumn < 0 || nextColumn >= n || matrix[nextRow][nextColumn] != 0) {
+                directionIndex = (directionIndex + 1) % 4; // 顺时针旋转至下一个方向
+            }
+            row = row + directions[directionIndex][0];
+            column = column + directions[directionIndex][1];
+
+```
+
+#### 63 障碍物路径
+
+```Bash
+if (obstacleGrid[i][j] == 1) {
+                    f[j] = 0;
+                    continue;
+                }
+// 设置障碍物的路径，将f[j]设置为零
+
+ f[0] = (obstacleGrid[0][0] == 0);
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < m; ++j) {
+                if (obstacleGrid[i][j] == 1) {
+                    f[j] = 0;
+                    continue;
+                }
+                if (j - 1 >= 0 && obstacleGrid[i][j - 1] == 0) {
+                    f[j] += f[j - 1];
+                }
+            }
+        }
+
+        return f.back();
+    }
+};
+--------------------------
+for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if (obstacleGrid[i][j] == 0) {
+                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+                }
+            }
+        }
+
+作者：sweetiee
+链接：https://leetcode-cn.com/problems/unique-paths-ii/solution/jian-dan-dpbi-xu-miao-dong-by-sweetiee/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+```
+
+##### 65 字符串问题
+
+通过有限状态机，或者状态机，等方式实现。
+
+##### 66 注意返回的类型
+
+```java
+ public int[] plusOne(int[] digits) {
+```
+
+返回的是 int[] , 所以每个for 循环返回一个值，然后合起来作为返回值，第二个return 作为，，，我就是不理解了。。。还是要调试看怎么运行的。。。
+
+
+
+##### 67 十进制二进制转换
+
+>  def addBinary(self, a, b) -> str:
+>         return '{0:b}'.format(int(a, 2) + int(b, 2))
+>
+> 
+
+> class Solution {
+>     public String addBinary(String a, String b) {
+>         return Integer.toBinaryString(
+>             Integer.parseInt(a, 2) + Integer.parseInt(b, 2)
+>         );
+>     }
+> }
+>
+> 
+
+![image-20220418184129729](https://s2.loli.net/2022/04/18/PvwnEACfdBTiYeQ.jpg)
+
+##### 71 注意队列
+
+​        Deque<String> stack = new ArrayDeque<String>(); 
+
+​                    stack.pollLast(); 
+
+​                ans.append(stack.pollFirst()); 
+
+
+
+##### 75 荷兰国旗问题
+

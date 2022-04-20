@@ -36,3 +36,8 @@ draft: false
 
 所以，**图片和文字需要分离**，不选择用上传到相对路径文件夹下，这样来节省费用。
 
+![image-20220410090242942](https://link.ap1.storjshare.io/raw/jxl7tkgemjfqomuhhv3epaakfcqq/picgo/picgo/2022/04/e04f07407986ff631ed62fc07cba856c.png)
+
+小程序serverless
+
+![image-20220410115255254](https://link.ap1.storjshare.io/raw/jxl7tkgemjfqomuhhv3epaakfcqq/picgo/picgo/2022/04/87167036cfc5a94b0ab35ea757359337.png)

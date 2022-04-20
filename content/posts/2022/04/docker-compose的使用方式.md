@@ -35,9 +35,9 @@ sh s.sh
 ```Bash
 apt update -y && apt install wget git -y
 wget https://github.com/docker/compose/releases/download/v2.4.0/docker-compose-linux-x86_64
-
 chmod +x docker-compose-linux-x86_64
-cp docker-compose-linux-x86_64 /usr/bin/docker-compose-linux-x86_64
+
+cp docker-compose-linux-x86_64 /usr/bin/docker-compose
 
 ```
 

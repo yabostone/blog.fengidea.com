@@ -95,7 +95,7 @@ npm run build
 在对应插件文件夹下安装
 
 rsync -avrP --exclude "node_modules" ".github" .  ~/.picgo/picgo-plugin-dogecloud/
-
+rsync -avrP --exclude "node_modules" ".github" .  ~/.picgo/picgo-plugin-rclone/
 
 // rsync -avrP picgo-plugin-dogecloud/dist  ~/.picgo/picgo-plugin-dogecloud/
 
@@ -103,8 +103,9 @@ rsync -avrP --exclude "node_modules" ".github" .  ~/.picgo/picgo-plugin-dogeclou
 cd ~/.picgo/
 
 npm install ./picgo-plugin-dogecloud/
-
-
+//需要在主文件夹下install，这样会更新package.json
+//从而添加plugins
+npm install ./picgo-plugin-rclone
 ```
 
 #### nodejs 想返回值数据到外层函数
@@ -228,3 +229,50 @@ git pull
 
 `nrm use taobao`
 
+#### 模板字符串 ${} 
+
+要用模板字符串的话不能用单双引号(`"` `'`)，要用反引号(```)。`Tab`键上面那个。
+形如：
+
+```javascript
+var time = `Time: ${+new Date()}`;
+```
+
+#### info ImgInfo
+
+  ``fileName: 'arm.png',`
+  `width: 406,`
+  `height: 124,`
+  extname: '.png'`
+
+#### async 和await 使用注意事项
+
+
+
+对于async await的理解和使用总结了一些规则和经验分享给大家：
+
+- async关键字添加到函数中返回的是promise而不是直接返回值
+- 在一个async里面可以存在多个await
+- 当使用async 和await的时候，先写上try catch用于错误处理，是一个好习惯
+- await内循环和迭代器**foreach**时要格外注意，可能会让你出现执行代码的顺序发生改变和错误
+- await仅阻止的是async函数中的代码执行。它只能确保promise解析时执行的下一行，如果异步操作已经开始，则await不会对其产生影响
+- 使用了await之后我们可以更容易设置断点进行调试debug了
+- 对于错误处理方式更友好了，可以与同步代码相同的方式使用try/ catch块
+
+#### picgo-compress的安装方法
+
+这里在线安装总是安装不上，提示要gyp，所以尝试用本地安装的方法
+
+
+
+1.将git 直接clone下来。
+
+2.npm install --save 生成相关node_module
+
+3.npm run build  生成js代码
+
+4.GUI本地安装插件
+
+### await
+
+await 和async ，await 必须返回一个promise，才能在此处等待
