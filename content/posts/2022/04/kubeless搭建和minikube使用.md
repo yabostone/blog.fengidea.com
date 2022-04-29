@@ -87,7 +87,7 @@ sudo apt-get install -y conntrack
 再start  
 
 ```Bash
-minikube start --vm-driver=none  -
+minikube start --vm-driver=none  
 ```
 
 

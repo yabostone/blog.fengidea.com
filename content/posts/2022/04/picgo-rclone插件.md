@@ -136,3 +136,40 @@ try {
     console.error(e.message);
 }
 ```
+
+- async/await 可以算是异步编程的终极解决方案，它通过同步的方式写异步代码，可以把 await 看作是让出线程的标志，先去执行 async 函数外部的代码，等调用栈为空再回来调用 await 后面的代码。
+
+不能promise后的then里面再放一层promise，await 就是解决这类问题的，所以将promise分开，并且加上await就可以了。
+
+
+
+可以将handle写短，减轻复杂度
+
+![image-20220423122815924](https://pic-mxuan.s3.us-west-001.backblazeb2.com/picgo/2022/04/990888dfc2c35bc5d998a91e15b52ca0.webp)
+
+![image-20220423123252538](https://f001.backblazeb2.com/file/pic-mxuan/picgo/2022/04/02eb54c300029d1621693594c14d0ab0.webp)
+
+这里的上传速度比较慢不知道是不是使用了await的缘故，
+
+然后桶的创建需要自己配置，多个后端源的话需要自己设置 桶内容。
+
+rclone mkdir storj:pic-mxuan
+
+#### b2的跨域请求
+
+好像使用s3兼容的就没问题？？？
+
+等下再试下。
+
+![](https://pic-mxuan.s3.us-west-001.backblazeb2.com/picgo/2022/04/ef82360523d9d9c03af21be68bd412f7.webp)
+
+### 新的CDN和存储
+
+发现新的cdn和存储，1G存储和1G流量各记为1积分，共25积分，还有请求次数。算起来也可以，重点是Akamai的和Fastly的网络，这个网络质量是真的很棒了。
+
+https://cloudinary.com/documentation/node_image_manipulation#deliver_and_transform_images
+
+可以多账号注册来解决免费的问题。
+
+可以自己写rclone 存储插件解决备份问题，或者本地备份。
+

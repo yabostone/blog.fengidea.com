@@ -108,3 +108,50 @@ Polycloud 的定价仅为每月每 GB 0.004 美元。只要您在该月流出的
 需要变更remotePath的方式
 
 ![](https://link.ap1.storjshare.io/raw/jxl7tkgemjfqomuhhv3epaakfcqq/picgo/picgo/2022/04/ea6aee36fa8419f59b3679b6a9fe65e3.png)
+
+
+
+#### 变更为b2
+
+算来算去，要么是dogecloud国内，存储价格应该算是免费，然后有大概最多几g的流量，考虑不被刷的情况下。
+
+或者是s3+cloudfront，流量免费，存储价格0.12元，
+
+或者是b2+ cloudflare ，流量免费，存储价格0.035元
+
+想想自己就是随便放在基金里面的钱，亏了30%，大概是40块钱，够买云服务几年了。还不如直接用b2，或者s3，没有多少钱的。
+
+storj用满了就开始迁移到s3或者b2。
+
+### 易贝虚拟卡
+
+![image-20220422122439547](https://link.ap1.storjshare.io/raw/jxl7tkgemjfqomuhhv3epaakfcqq/picgo/picgo/2022/04/b3d229ef2ea2f9dff61819377a6efb81.webp)
+
+#### 用来测试网页链接的
+
+
+
+   ![等待](https://blog-fengidea-com.onrender.com/picture/2021/07/lADPDh0cQBQ9M-DNaq7NAsQ_708_27310.jpg) 
+
+ ![image-20220422132525511](https://link.ap1.storjshare.io/raw/jxl7tkgemjfqomuhhv3epaakfcqq/picgo/picgo/2022/04/728c9ad0d71bf277f47fef7bf35b4dc2.webp)
+
+#### 使用b2+cloudflare
+
+使用免费的cdn需要将域名存放在cloudflare，而自己的站可能要将其转移到国内，所以，相对而言，用amazon的cloudfront似乎更便宜一些。
+
+b2的每天1GB免费也是很香啊，但是这类都有可能会被刷的概率。
+
+如果考虑到会被刷的话，那么还是要用aws，
+
+如果考虑不使用信用卡的话，需要用国内云的国外方式。
+
+但是国内云的价格还是很贵的，参见https://iktao.cn/archives/2020/38.html，每月要多1G的底价。
+
+不然就是用dogecloud了。（国内最香）
+
+
+
+### storj 本地的URL
+
+https://link.ap1.storjshare.io/raw/jxl7tkgemjfqomuhhv3epaakfcqq/picgo
+
