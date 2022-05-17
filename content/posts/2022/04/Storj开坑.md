@@ -155,3 +155,15 @@ b2的每天1GB免费也是很香啊，但是这类都有可能会被刷的概率
 
 https://link.ap1.storjshare.io/raw/jxl7tkgemjfqomuhhv3epaakfcqq/picgo
 
+
+
+### NAT的转发
+
+![image-20220502201604223](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1651493776/2022/05/26eb3259f19167b32c9ed24fbcdef80e.webp)
+
+![image-20220502220914279](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1651500556/2022/05/ea562344f8d3004ada677d89c01a49c0.webp)
+
+端口转发可以构建FullCone，但是会需要手动进行端口转发。
+
+端口转发会有端口冲突，需要完全不冲突。
+

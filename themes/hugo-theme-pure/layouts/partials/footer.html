@@ -15,5 +15,10 @@
         <a href="https://beian.miit.gov.cn/" target="_blank">{{- print .Site.Params.beian }}</a>
       </div>
     {{ end }}
+    {{ if (isset .Site.Params "gongan") }}
+      <div>
+        <a href="https://beian.miit.gov.cn/" target="_blank">{{- print .Site.Params.gongan }}</a>
+      </div>
+    {{ end }}
   </div>
 </footer>

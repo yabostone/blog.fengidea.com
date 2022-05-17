@@ -259,3 +259,11 @@ https://github.com/eldada/kubeless-demo
 
 ![image-20220413233204227](https://link.ap1.storjshare.io/raw/jxl7tkgemjfqomuhhv3epaakfcqq/picgo/picgo/2022/04/93840c3a0a4ec9c0906b16c56864647b.png)
 
+
+
+### 容器在k8s下网络部分的各类比较
+
+https://www.kubernetes.org.cn/2059.html
+
+包括calico，weave，等等flannel多种比较
+

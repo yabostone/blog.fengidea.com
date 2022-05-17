@@ -1,5 +1,5 @@
 ---
-title: "Picgo插件开发-dogecloud"
+title: "Picgo插件开发-dogecloud-配置compress等"
 date: 2022-03-30T08:04:56+08:00
 tags:
   - 开发	

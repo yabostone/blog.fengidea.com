@@ -70,7 +70,8 @@ params:
   dateFormatToUse: "2006-01-02"
   enablePostCopyright: true
   copyright_link: http://creativecommons.org/licenses/by/4.0/deed.zh
-  beian: "beian"
+  beian: "苏ICP备2022018818号"
+  gongan: "公安备案"
   # the directory under content folder that you want to render
   mainSections: ["posts"]
   # Enable/Disable menu icons
