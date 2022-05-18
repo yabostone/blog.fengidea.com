@@ -1,7 +1,7 @@
 baseURL: https://blog.fengidea.com/
 #theme: pure
 theme: hugo-theme-pure
-title: Feng Peng | 彭峰
+title: Feng Peng | 彭峰的个人博客
 copyright: CC BY 4.0 CN
 defaultContentLanguage: zh  # en/zh/...
 footnoteReturnLinkContents: ↩
@@ -70,7 +70,7 @@ params:
   dateFormatToUse: "2006-01-02"
   enablePostCopyright: true
   copyright_link: http://creativecommons.org/licenses/by/4.0/deed.zh
-  beian: "苏ICP备2022018818号"
+  beian: "苏ICP备2022018818号-1"
   gongan: "公安备案"
   # the directory under content folder that you want to render
   mainSections: ["posts"]
