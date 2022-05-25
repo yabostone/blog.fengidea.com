@@ -104,3 +104,190 @@ ddns 的webhook 接入pushdeer可以。
 
 ！！！ 快速生成虚拟机或者lxc。
 
+消息推送可用
+
+
+
+#### 如果saltstack master ip变化
+
+那么我们就无法连接了。考虑内部的master，再考虑外部master。
+
+#### 脚本配置安装salt
+
+Ubuntu下面
+
+https://techviewleo.com/install-saltstack-master-minion-on-ubuntu/
+
+### 用脚本配置安装saltstack
+
+一直报错。。saltstack的github说是版本问题，salt-master需要更新到最新。。。
+
+alpine更新吧。。。
+
+https://repo.saltproject.io/#ubuntu
+
+![image-20220521162849200](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1653121731/2022/05/624202e6fd17fc74d633239ca20bd0a6.webp)
+
+选择稳定版不是最新版！！！！
+
+### 配置edge
+
+```
+#http://mirrors.nju.edu.cn/alpine/edge/main
+#http://mirrors.nju.edu.cn/alpine/edge/community
+#http://mirrors.nju.edu.cn/alpine/edge/testing
+```
+
+没有用，版本不对应，ubuntu的版本最新，alpine的edge下还是rc.0,默认版本没有更上。
+
+ubuntu的版本还不能调整，只能用ubuntu作为master。
+
+###### 配置minion
+
+sed -i "s/archive.ubuntu.com/mirrors.nju.edu.cn/g" /etc/apt/sources.list
+
+
+
+sed -i "s/security.ubuntu.com/mirrors.nju.edu.cn/g" /etc/apt/sources.list
+
+设置ubuntu的命令
+
+sed -i "s/ftp.debian.org/mirrors.nju.edu.cn/g" /etc/apt/sources.list
+
+sed -i "s/security.debian.org/mirrors.nju.edu.cn\/debian-security/g" /etc/apt/sources.list
+
+设置debian
+
+调试bug
+
+ salt-minion  --log-level=debug
+
+**debian和ubuntu互通，那么，设置alpine的master需要是单独的才能设置，不然就单独设置ssh通道。设置镜像包。**
+
+还是3004.1，稳定版也是这个，无奈了。
+
+
+
+### 设置ip变更
+
+1.获取主机名称  salt "*" grains.items 
+
+！！！！ **grains是静态的，包括ip地址，只会在启动时收集。**
+
+```bash
+ master:
+        192.168.0.11
+ os:
+        Alpine
+ os_family:
+        Alpine
+ osarch:
+        x86_64
+ ipv6:
+        - ::1
+        - 240e:3a1:6266:67f0:a0f6:b6ff:fec0:7a15
+        - fe80::a0f6:b6ff:fec0:7a15
+     fqdn:
+        salt-alpine.zte
+    fqdn_ip4:
+        - 192.168.0.11
+    fqdn_ip6:
+    host:
+        salt-alpine   ### host 就是可以用来作为域名前缀的，salt-alpine.internal.dlink.bid salt-alpine.v6.dlink.bid
+```
+
+
+
+2.触发机制
+
+如果ipv6的主机名称发生变化，那么就触发更新自动重启，
+
+或者通过ddns的机制，ipv6发生变化，那就调用hook，hook调用salt完成内容。
+
+这个没法用grains做，grains静态的。
+
+需要启动pillar ，在master 的配置项内添加内容。
+
+可用脚本python定期获取ipv6数据，然后更新到grains中，salt-master定期查询grains，进行更新
+
+可以定期调用network模块判断内容。
+
+
+
+![image-20220521174949516](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1653126592/2022/05/e8b8d33a0a403143ae5d80b45054921b.webp)
+
+`salt.modules.network.``ip_addrs6`(*interface=None*, *include_loopback=False*, *cidr=None*)
+
+Returns a list of IPv6 addresses assigned to the host. ::1 is ignored, unless 'include_loopback=True' is indicated. If 'interface' is provided, then only IP addresses from that interface will be returned. Providing a CIDR via 'cidr="2000::/3"' will return only the addresses which are within that subnet.
+
+*Changed in version 3001:* `interface` can now be a single interface name or a list of interfaces. Globbing is also supported.
+
+CLI Example:
+
+```
+salt '*' network.ip_addrs6
+```
+
+###### git后端
+
+git后端可以不用，直接用rootfs。
+
+##### 触发机制
+
+这里触发机制应该是用cron或者什么直接判断后调用saltstack进行处理。
+
+高级点就是用nomad这类或者xxl-job进行调用触发。
+
+###### 配置pip
+
+```Bash
+pip config set global.index-url https://mirror.nju.edu.cn/pypi/web/simple
+
+```
+
+
+
+
+
+#### pillar设置
+
+pillar只能master 端设置 。client端执行。
+
+而pillar信息只能在master端配置，在到minion端执行
+
+##### 全球的ipv4地址由dns获取
+
+**指定nameserver！！！！**
+
+![image-20220522090534970](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1653181538/2022/05/8d3caf68208d69632e67950333bc3f90.webp)
+
+### alpine安装psutil
+
+apk add py3-psutil
+
+不用安装build-essential
+
+
+
+https://blog.csdn.net/qq_30068487/article/details/90297814
+
+https://jaminzhang.github.io/saltstack/SaltStack-Using-Jinja2/ 模板 和获取值。
+
+
+
+这种特殊的配置，估计只能用cmd.run 配置下去。
+
+没有监控？？ 没有监控文件改变的，需要定期用salt？
+
+本地放在自动更新内容。
+
+server端单独设计python脚本。变更ip，就在脚本内完全变更ip的值，完全重启。
+
+client端的内容变更，一种思路是update的https的脚本内容，定时获取值。ansible和salt都可以设置source为HTTPS的file。
+
+另外一种是通知，client端检查dns是否变化，如果发生变化，说明ip变化，说明需要变更内容。
+
+这里的python作为服务要用nomad，方便查看，如果手动的话会忘记。一个域里面只要一个nomad就可以了。
+
+（域名里面包括dns的费用了。）
+
