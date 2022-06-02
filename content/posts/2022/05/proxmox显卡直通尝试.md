@@ -27,5 +27,21 @@ draft: false
 
 ### 服务器 的q9505 主板
 
-主板断电后不能正常启动，启动会卡住。
+主板断电后不能正常启动，启动会卡住。使用的网卡启动
 
+
+
+@@@！！！ 检查virtgl是否在host机中安装正确。
+
+![image-20220529092551397](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1653787553/2022/05/7b164ac6f9f24eb30505f34c729a4f63.webp)
+
+查看这篇文章：https://www.owalle.com/2020/04/03/crosvm-virtio-gpu/
+
+
+
+添加OpenGL，查看
+
+you could use spice with virtio-gpu i guess, but you would have to put those things in the 'args' parameter
+but gl acceleration will not work, we do not compile our qemu against it
+
+also spice with gl acceleration (virgl/virglrenderer) only works (afaik) locally over a unix socket not over the network

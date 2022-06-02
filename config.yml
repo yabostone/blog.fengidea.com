@@ -1,4 +1,5 @@
 baseURL: https://blog.fengidea.com/
+#baseURL:
 #theme: pure
 theme: hugo-theme-pure
 title: Feng Peng | 彭峰的个人博客

@@ -122,3 +122,36 @@ var total = 0;
 ```
 
 ![image-20220514194114784](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1652528476/2022/05/abb198b2b7958ffa635c0fa5f7a37039.webp)
+
+### docker 大作业
+
+    8  ls
+    9  vim /etc/profile
+   10  mvn -v
+   11  cd ~
+   12  mvn archetype:generate -Dgroupid=org.examples.java -DartifactId=helloworld
+   13  mvn archetype:generate -DgroupId=org.examples.java -DartifactId=helloworld
+   14  vim ~/.m2/settings.xml
+   15  nano ~/.m2/settings.xml
+   16  ls -ahl
+   17  nano ~/.m2/settings.xml
+   18  mvn archetype:generate -DgroupId=org.examples.java -DartifactId=helloworl
+   19  tree .m2/
+   20  ls
+   21  cd helloworl/
+   22  ls
+   23  mvn package
+   24  java -co target/helloworl-1.0-SNAPSHOT.jar org.examples.java.app
+   25  java -cp target/helloworl-1.0-SNAPSHOT.jar org.examples.java.app
+   26  java -cp target/helloworl-1.0-SNAPSHOT.jar org.examples.java.App
+   27  docker container:run -it openjdk:8
+   28  docker run -it openjdk:8
+   29  history
+[huangliuyan1237@centos7 helloworl]$
+
+
+
+ git clone https://ghproxy.com/https://github.com/arun-gupta/docker-java-sample
+
+mvn -f docker-java-sample/pom.xml install -Pdocker
+

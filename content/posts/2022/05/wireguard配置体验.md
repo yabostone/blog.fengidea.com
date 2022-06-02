@@ -130,6 +130,14 @@ ping wg外没法访问。
 
 **任何一边变更配置，都可能要两边重启wg，op可能还要重启防火墙。**
 
+
+
+###### %i 的语法
+
+http://kaige.org/2019/07/24/iptables/
+
+
+
 ## LAN to LAN SDLAN
 
 wireguard节点，配置两个wg0-wg1，分配连不同网段？？
@@ -246,4 +254,107 @@ server端还是用脚本重启，因为使用域名，至少有1分钟不能访�
 ### 用wireguard 可以连接完全内网的vps
 
 可以选用仅ipv6的vps和natvps和完全内网的vps了。
+
+## 连接服务器端的网段
+
+![image-20220525203627749](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1653482190/2022/05/fb10aa50e7a7c53ae0c03cd12bf9a568.webp)
+
+前两个配置所有wg0的端口都可以通过iptables。
+
+后一个eth0是指向外网或者wireguard所在的网段或者上一级网段。添加masq可以让其他的客户端访问192.168.0.0网段**（interface所在网段和上级路由所在网段）**
+
+如果要让vmware下的路由能访问本机所在的网段，添加allowedIPs，添加iptables将上级路由所在端口转为masq方式访问。
+
+![image-20220525205157254](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1653483119/2022/05/a0a05a6eafa6a9dd9d86db8234bc5e06.webp)
+
+## QOS
+
+说明各地都是有qos，所以还是要套udp2raw。或者用tinc。
+
+![image-20220526092527717](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1653528330/2022/05/c096183501835ea0cd975157abf2102a.webp)
+
+国外回家吗？
+国内使用，普通 vpn 完全没有问题
+
+ 不是，就是单纯同城回家里内网，其实单看流量进出比例也知道我这不是过墙梯啊，不明白为啥一直被干扰
+
+udp 的 qos 很难受，尤其跨运营商。
+
+wireguard，广东移动，如果作为客户端去连另一台广东电信的，一开始是通的，一段时间后就断了，重启 wg 也不通，需要关掉隔很久在开才通，如果做服务端，frp 出去就很正常
+
+哪的网这么坑啊，太原电信很好，微信找客服报障说要公网 IP，宽带账号发过去五分钟完事，v4v6 双公网，端口就封了个 80/443/8080，VPN 管都不管，L2tp 好好的。openwrt 跑俩 DDNS 再加上 SoftetherVPN，在配上 Zerotier 备用，远程桌面什么的搞个网络唤醒+端口转发，稳如老狗。
+
+
+
+我也是尝试过各种方案，现在稳定用了一年的方案是 softether 双协议，电脑用 softether，手机连 openvpn，高位端口
+
+我也发现这个问题，v2rayNG/SSR 和 zerotier 不能同时打开，好在很少远程需要回家
+
+
+
+ipv6 很好用, 北京电信
+
+- zerotier 这公司还真牛逼，在北上广偷偷建立各种高速节点，这勤奋程度比很多机场都要强。
+
+zerotier 经常出现打洞失败的情况，换成 WireGuard 了。
+
+**印象中移动宽带已经封了 wireguard**
+
+国内用 vpn 没有跨境的话，不至于那么容易出问题吧，喝茶又从何谈起。别干不该干的，低调一点，不会有任何问题。王静没那么多闲工夫。
+vpn 只是一项技术，真要一刀切政治不正确，1194 之类的端口早就被运营商封了。openvpn 协议 l2tp 协议早就被拦了。
+
+###### udp2raw不支持域名
+
+需要自己解析ip。
+
+如果udp没有问题的话，那么op和wg也是没有问题的呀。
+
+wireguard 可以套 udp2raw ，我就是这样骗过 gfw ，单独 wg 不稳定，偶尔能过墙，大多数不行，套上 udp2raw 很稳。
+
+![image-20220526150053126](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1653548456/2022/05/fc16e016ae4786b65ee151a68157bb47.webp)
+
+##### wireguard部分用法
+
+### 奇技淫巧
+
+#### 共享一个 peers.conf 文件
+
+介绍一个秘密功能，可以简化 WireGuard 的配置工作。如果某个 `peer` 的公钥与本地接口的私钥能够配对，那么 WireGuard 会忽略该 `peer`。利用这个特性，我们可以在所有节点上共用同一个 peer 列表，每个节点只需要单独定义一个 `[Interface]` 就行了，即使列表中有本节点，也会被忽略。具体方式如下：
+
+- 每个对等节点（peer）都有一个单独的 `/etc/wireguard/wg0.conf` 文件，只包含 `[Interface]` 部分的配置。
+- 每个对等节点（peer）共用同一个 `/etc/wireguard/peers.conf` 文件，其中包含了所有的 peer。
+- Wg0.conf 文件中需要配置一个 PostUp 钩子，内容为 `PostUp = wg addconf /etc/wireguard/peers.conf`。
+
+关于 `peers.conf` 的共享方式有很多种，你可以通过 `ansible` 这样的工具来分发，可以使用 `Dropbox` 之类的网盘来同步，当然也可以使用 `ceph` 这种分布式文件系统来将其挂载到不同的节点上。
+
+#### 从文件或命令输出中读取配置
+
+WireGuard 也可以从任意命令的输出或文件中读取内容来修改配置的值，利用这个特性可以方便管理密钥，例如可以在运行时从 `Kubernetes Secrets` 或 `AWS KMS` 等第三方服务读取密钥。
+
+### 容器化
+
+WireGuard 也可以跑在容器中，最简单的方式是使用 `--privileged` 和 `--cap-add=all` 参数，让容器可以加载内核模块。
+
+你可以让 WireGuard 跑在容器中，向宿主机暴露一个网络接口；也可以让 WireGuard 运行在宿主机中，向特定的容器暴露一个接口。
+
+下面给出一个具体的示例，本示例中的 `vpn_test` 容器通过 WireGuard 中继服务器来路由所有流量。本示例中给出的容器配置是 `docker-compose` 的配置文件格式。
+
+中继服务器容器配置：
+
+**从可以用docker上看wg是只使用一个端口的。**
+
+![image-20220526150718036](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1653548840/2022/05/fe98d99b54751a8fcfb17e3faa862c04.webp)
+
+狗云的价格好像15元之内都还好。
+
+## wireguard 配置一个带路由的peer
+
+```Bash
+iptables -A FORWARD -i vpn0 -j ACCEPT
+iptables -A FORWARD -o vpn0 -j ACCEPT
+iptables -t nat -A POSTROUTING -o vpn0 -j MASQUERADE
+iptables -t nat -D POSTROUTING -o wan -j MASQUERADE
+```
+
+添加防火墙到openwrt上面。
 
