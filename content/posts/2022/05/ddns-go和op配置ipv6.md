@@ -1,10 +1,14 @@
 ---
-title: "Ddns Go配置ipv6"
+title: "Ddns Go配置ipv6-op配置ipv6-relay"
 date: 2022-05-03T13:13:01+08:00
 draft: false
 ---
 
 添加服务将配置ipv6的ddns
+
+> 配置ipv6下的relay。
+>
+> https://www.aladown.com/2021/06/%E7%AE%80%E5%8D%95%E5%B9%B2%E5%87%80%E7%9A%84Openwrt-ipv6%E9%85%8D%E7%BD%AE-%E5%B1%80%E5%9F%9F%E7%BD%91WAN6%E4%B8%AD%E7%BB%A7%E6%A8%A1%E5%BC%8F%E8%8E%B7%E5%8F%96%E5%8E%9F%E7%94%9Fipv6%E5%9C%B0%E5%9D%80-%E6%97%A0%E9%9C%80PD/
 
 ### 本想着自己写
 
@@ -138,6 +142,17 @@ house:`` ``family: { name: Doe, parents: [John, Jane], children: [Paul, Mark, Si
 
 或者将http和https的端口用宝塔设定成同一个，但是数量还是受限。
 
+!!!!重启使用odhcpd！！！
+
+```Bash
+/etc/init.d/odhcpd restart
+# 使用odhcpd 重启，编辑/etc/config/dhcp文件
+```
+
+
+
+！！！ 下面是 `/etc/config/dhcp` 中的配置
+
 ![image-20220509103329481](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1652063614/2022/05/4f0a38108208876131c3b10852f78e5a.png)
 
 ```Bash
@@ -167,7 +182,15 @@ config dhcp 'wan6'
 
 https://cangshui.net/4730.html
 
-设置 ipv6的 带d开头的内网ipv6的openwrt。就会是内网ipv6
+设置 ipv6的 带d开头的内网ipv6的openwrt。就会是内网ipv6。**这个内网的ULA前缀必须设置。**
+
+接着一定要LAN口设置分配ipv6的/64。
+
+！！！ 是配置到 /etc/config/dhcp 中！！！。不是在network中！！！
+
+
+
+
 
 
 
