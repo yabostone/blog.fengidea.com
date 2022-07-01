@@ -10,3 +10,17 @@ draft: false
 
 思路： 通过k3s的flannel配置wireguard协议或者其他协议，暴露端口转发。
 
+### proxmox绑定mac
+
+network 绑定mac，保持网卡名称不变化,network, enp3s0
+
+```Bash
+root@e5:~# vim /etc/systemd/network/10-onboard.link 
+root@e5:~# cat  /etc/systemd/network/10-onboard.link 
+[Match]
+MACAddress= 00:e0:4c:4f:65:c4
+[Link]
+Name=enp7s0
+root@e5:~# 
+```
+

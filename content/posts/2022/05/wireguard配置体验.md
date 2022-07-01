@@ -6,6 +6,40 @@ draft: false
 
 用来异地组网，可能要用udp2raw。
 
+
+
+！！！ 更改端口的方式
+
+----------------------
+
+
+
+我现在的解决办法，用当天的日期xx做端口号末尾两位，比如`50xx`，用着还行
+
+### 服务器
+
+```
+# cron
+1 0 * * * sudo wg set kr listen-port 50$(date +\%d)
+# /etc/sudoers.d/sudoer
+al      ALL=(ALL)       NOPASSWD: /usr/bin/wg
+```
+
+### 客户端
+
+```
+wg-quick down kr
+# wg set 会去掉 DNS，所以直接编辑配置文件
+sudo sed -i /Endpoint/s/:50.*/:50$(date +%d)/ /etc/wireguard/kr.conf
+wg-quick up kr
+```
+
+---------------------
+
+
+
+
+
  **systemctl reload wg-quick@wg0.service**
 
 修改配置后一定要用reload，用restart和stop方式没有用。
@@ -358,3 +392,6 @@ iptables -t nat -D POSTROUTING -o wan -j MASQUERADE
 
 添加防火墙到openwrt上面。
 
++ 联通？上海联通时常有 但也不是一直有，不知道触发的模式.
+  之前用的是 Wireguard 和 Anyconnect 这种 UDP 的 VPN ，
+  另外最近 Wireguard 算是完了 前一天用 第二天就端口封掉了

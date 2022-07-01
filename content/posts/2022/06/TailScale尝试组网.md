@@ -10,6 +10,16 @@ tailscale的内网段只能使用要求的一个网段，通过route add 添加�
 
 ！！！ 但是每个devices都能使用一个网段，通过多个设备可以访问多个网段。。。我靠了。
 
+# 注意
+
+#### tailscale 默认端口被屏蔽
+
+注意，默认端口41641是被屏蔽的，需要更换端口，**可以用端口转发udp，只要保证相同的端口号就可以。**
+
+
+
+可以在tailscale上的路由处，连接tailscale后指定ip访问远程路由。
+
 
 
 在openwrt上，或者linux下，iptables加鉴权判断，没有添加route表。
@@ -27,6 +37,24 @@ tailscale的内网段只能使用要求的一个网段，通过route add 添加�
 3.默认路由是开启upnp的路由，开启到wan口。
 
 4.upnp默认是开启100个连接，openwrt的而且会快速失效，需要将保存时间延长。
+
+
+
+!!!!
+
+## 修改默认端口
+
+```Bash
+[Service]
+EnvironmentFile=/etc/default/tailscaled
+ExecStartPre=/usr/sbin/tailscaled --cleanup
+ExecStart=/usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --port $PORT $FLAGS
+ExecStopPost=/usr/sbin/tailscaled --cleanup
+```
+
+环境变量在 /etc/default/tailscaled  中修改默认端口。
+
+
 
 ## 直连步骤
 
@@ -113,3 +141,13 @@ Openwrt下，/etc/config/tailscale 可以修改默认的端口。
 数据从外向内流向，指定用端口转发。
 
 ![image-20220616113500821](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1655350505/2022/06/f29aa6b731014b83ed61ca06374bbd90.webp)
+
+
+
+![image-20220616141910305](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1655360354/2022/06/5675578262bcb6931d71a77d312fd502.webp)
+
+![image-20220617132510893](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1655443514/2022/06/f4cce121bbd8abf30aa2300856698d5d.webp)
+
++ 联通？上海联通时常有 但也不是一直有，不知道触发的模式.
+  之前用的是 Wireguard 和 Anyconnect 这种 UDP 的 VPN ，
+  另外最近 Wireguard 算是完了 前一天用 第二天就端口封掉了

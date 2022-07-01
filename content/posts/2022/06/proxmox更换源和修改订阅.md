@@ -162,3 +162,14 @@ sed -i_orig "s/.data.status.toLowerCase() !== 'active'/false/g" /usr/share/javas
 sed -Ezi.bak "s/(Ext.Msg.show\(\{\s+title: gettext\('No valid sub)/void\(\{ \/\/\1/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
 systemctl restart pveproxy.service
 ```
+
+
+
+## 更换源
+
+```Bash
+sed -i "s/security.debian.org/mirrors.ustc.edu.cn\/debian-security/g" /etc/apt/sources.list
+sed -i "s/ftp.debian.org/mirrors.ustc.edu.cn/g" /etc/apt/sources.list
+
+```
+
