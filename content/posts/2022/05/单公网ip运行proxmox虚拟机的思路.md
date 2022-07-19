@@ -18,7 +18,7 @@ network 绑定mac，保持网卡名称不变化,network, enp3s0
 root@e5:~# vim /etc/systemd/network/10-onboard.link 
 root@e5:~# cat  /etc/systemd/network/10-onboard.link 
 [Match]
-MACAddress= 00:e0:4c:4f:65:c4
+MACAddress= 30:9c:23:de:89:50
 [Link]
 Name=enp7s0
 root@e5:~# 

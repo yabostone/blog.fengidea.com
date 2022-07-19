@@ -6,7 +6,7 @@ draft: false
 
 用来异地组网，可能要用udp2raw。
 
-
+!!! Allowed_ip 添加 172.20.0.0/24网段，只添加/32 网段无法访问，24网段是作为路由要求放入的。
 
 ！！！ 更改端口的方式
 
@@ -395,3 +395,13 @@ iptables -t nat -D POSTROUTING -o wan -j MASQUERADE
 + 联通？上海联通时常有 但也不是一直有，不知道触发的模式.
   之前用的是 Wireguard 和 Anyconnect 这种 UDP 的 VPN ，
   另外最近 Wireguard 算是完了 前一天用 第二天就端口封掉了
+
+## wireguard联通在openwrt下
+
+**主节点务必加上SNAT,将所有通信更改源ip到192.168.0.2上。**
+
+```
+iptables -t nat -A POSTROUTING -s 172.20.0.0/24 -j SNAT --to-source 192.168.0.2
+
+```
+

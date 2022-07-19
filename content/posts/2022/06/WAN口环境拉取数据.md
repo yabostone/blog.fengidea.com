@@ -112,3 +112,12 @@ rsync.download('/home/mxuan/torrents/qbittorrent/', '/data/', creds=creds)
 udp2raw可以用bbr等拥塞控制协议。。
 
 > 比如说，由于运营商一般会对UDP流量进行策略化监管或者限速，目前，有一种非常简单的UDP双边加速的方式就是，仅仅将协议号由UDP改成TCP即可！而UDP允许一定程度的丢包，所以说，路由器交换机的AQM对其而言，就是刑不上大夫！
+
++ 凡是涉及到dsm的，优先使用网页端的rsync。
+
++ PVE 使用桥接速度直接砍半？？ 
+  + ![image-20220715114556460](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1657856769/2022/07/98546abd3c0d784011301203afd96502.webp)
+
++ 可能是ip的包需要走192.168.0.1路由中转，然后只是一根线所以跑满了上联的那根线？？
++ 更换网关到192.168.0.2 ,没有反应，说明网关是内网跨到外网时候使用的。
+  + ![image-20220715121759496](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1657858685/2022/07/34ed470dc76e1a8740c51f68087ce4ff.webp)
