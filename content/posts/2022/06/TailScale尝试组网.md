@@ -151,3 +151,11 @@ Openwrt下，/etc/config/tailscale 可以修改默认的端口。
 + 联通？上海联通时常有 但也不是一直有，不知道触发的模式.
   之前用的是 Wireguard 和 Anyconnect 这种 UDP 的 VPN ，
   另外最近 Wireguard 算是完了 前一天用 第二天就端口封掉了
+
+# 网络占用和消耗
+
+发现占用资源比较多，在内网环境下，接近1/3的损耗，从36.1 到0.1的网段，几乎打满，这就是两个客户端分别网段的弊端。！！！结果36.1到0.1完全没有用到tailscale，瞎操心了。就是单纯的流量上下。
+
+回去后使用wireguard组网，需要注意，tailscale作为备份使用咯。
+
+![image-20220719215401463](https://res.cloudinary.com/dbzr1zvpf/image/upload/v1658238844/2022/07/13bf825717a90e1acc9f1c2e7ea6d274.webp)
