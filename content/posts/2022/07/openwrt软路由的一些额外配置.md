@@ -36,7 +36,9 @@ echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 
 
 
-注意pcie接口和USB接口的稳定性，有时候会接触不良，这个需要排查网络中断的位置。好像底下那个USB口不稳定，原因不明，换了一个口，先看看。
+注意pcie接口和USB接口的稳定性，有时候会接触不良，这个需要排查网络中断的位置。好像底下那个USB口不稳定，原因不明，换了一个口，先看看。更新：经过测试，USB网卡不够稳定，散热不够好，大流量运行会断。包括USB转SATA也是这样。
+
+
 
 好像两台机子都不稳定。。说明还是用intel+pcie的比较稳。
 
@@ -45,4 +47,10 @@ echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 ## tailscale和wg
 
 可以在NAT3网络上添加tailscale，然后再用CGNAT网段配上固定的wireguard的endpoint，达到穿透的目的！！
+
+
+
+#### coremark
+
+openwrt下有coremark，可以打满CPU测试频率问题。
 
