@@ -12,13 +12,14 @@
     </div>
     {{ if (isset .Site.Params "beian") }}
       <div>
-        <a href="https://beian.miit.gov.cn/" target="_blank">{{- print .Site.Params.beian }}</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{- print .Site.Params.beian }}</a>
       </div>
     {{ end }}
     {{ if (isset .Site.Params "gongan") }}
-      <div>
-        <a href="https://beian.miit.gov.cn/" target="_blank">{{- print .Site.Params.gongan }}</a>
-      </div>
+        <div style="width:300px;margin:0 auto; padding:0px 0;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32058302003279" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="images/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#D2D1E1;">苏公网安备 32058302003279号</p></a>
+		</div>
+	 
     {{ end }}
   </div>
 </footer>
