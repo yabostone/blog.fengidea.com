@@ -96,3 +96,4 @@ VNFM（Virtualized Network Function Manager，虚拟化网络功能管理器）�
 - **NFV相关技术**：管理虚拟化网络功能和资源。
 
 具备这些技能的开发者可以高效地设计、开发和维护VNFM平台，满足现代网络管理的需求。
+
